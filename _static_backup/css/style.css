@@ -1,0 +1,122 @@
+/* Base Styles */
+:root {
+    --primary: #06b6d4; /* cyan-500 */
+    --secondary: #14b8a6; /* teal-500 */
+    --dark: #0f172a; /* slate-900 */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Gradient Backgrounds */
+.gradient-bg {
+    background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.1) 0%, transparent 40%);
+}
+
+.tech-gradient {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(30, 41, 59, 0.7); /* slate-800 with opacity */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3);
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+    @apply border border-slate-600 hover:border-cyan-500 text-slate-300 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2;
+}
+
+/* Form Styles */
+.form-input, .form-textarea, .form-select {
+    @apply w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-300;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-slate-400 mb-2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-in-up {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Filter Buttons */
+.filter-btn {
+    @apply px-4 py-2 rounded-full border border-slate-700 text-slate-400 text-sm font-medium transition-all duration-300 hover:border-cyan-500 hover:text-white;
+}
+
+.filter-btn.active {
+    @apply bg-cyan-500 border-cyan-500 text-white shadow-lg shadow-cyan-500/25;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.active {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* Capsule */
+.capsule {
+    @apply px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider;
+}
