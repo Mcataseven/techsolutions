@@ -44,7 +44,7 @@
           </div>
           <div class="animate-slide-in-up">
             <div class="card p-4 overflow-hidden">
-              <img src="/images/about-team.jpg" alt="Our Team" class="rounded-lg w-full h-auto">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Our Team" class="rounded-lg w-full h-auto">
             </div>
           </div>
         </div>
@@ -128,9 +128,9 @@ const values = [
 ]
 
 const team = [
-  { name: 'John Smith', role: 'CEO & Founder', bio: 'Visionary leader with 15+ years in tech', image: '/images/team-1.jpg' },
-  { name: 'Sarah Johnson', role: 'CTO', bio: 'Full-stack expert and architecture guru', image: '/images/team-2.jpg' },
-  { name: 'Mike Chen', role: 'Lead Designer', bio: 'Creating beautiful user experiences', image: '/images/team-3.jpg' },
-  { name: 'Emily Brown', role: 'Project Manager', bio: 'Keeping projects on track and teams aligned', image: '/images/team-4.jpg' }
+  { name: 'John Smith', role: 'CEO & Founder', bio: 'Visionary leader with 15+ years in tech', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80' },
+  { name: 'Sarah Johnson', role: 'CTO', bio: 'Full-stack expert and architecture guru', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80' },
+  { name: 'Mike Chen', role: 'Lead Designer', bio: 'Creating beautiful user experiences', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80' },
+  { name: 'Emily Brown', role: 'Project Manager', bio: 'Keeping projects on track and teams aligned', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80' }
 ]
 </script>

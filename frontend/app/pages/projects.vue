@@ -115,42 +115,42 @@ const projects = [
   {
     title: 'FinTech Dashboard',
     description: 'A comprehensive financial analytics platform with real-time data visualization.',
-    image: '/images/project-1.jpg',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
     category: 'web',
     tags: ['Vue.js', 'Laravel', 'Charts']
   },
   {
     title: 'Health & Fitness App',
     description: 'Mobile application for tracking workouts, nutrition, and health metrics.',
-    image: '/images/project-2.jpg',
+    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80',
     category: 'mobile',
     tags: ['React Native', 'Node.js']
   },
   {
     title: 'E-commerce Platform',
     description: 'Custom online store with advanced inventory management and analytics.',
-    image: '/images/project-3.jpg',
+    image: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=800&q=80',
     category: 'ecommerce',
     tags: ['Shopify', 'Custom Theme']
   },
   {
     title: 'SaaS Project Manager',
     description: 'Project management tool with team collaboration and time tracking.',
-    image: '/images/project-4.jpg',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
     category: 'web',
     tags: ['React', 'PostgreSQL']
   },
   {
     title: 'Food Delivery App',
     description: 'On-demand food delivery platform with real-time order tracking.',
-    image: '/images/project-5.jpg',
+    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80',
     category: 'mobile',
     tags: ['Flutter', 'Firebase']
   },
   {
     title: 'Fashion Marketplace',
     description: 'Multi-vendor fashion marketplace with advanced search and filters.',
-    image: '/images/project-6.jpg',
+    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
     category: 'ecommerce',
     tags: ['Laravel', 'Vue.js']
   }
