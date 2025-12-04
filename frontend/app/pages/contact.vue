@@ -169,12 +169,12 @@ const form = reactive({
 
 const submitForm = async () => {
   isSubmitting.value = true
-  
+
   // Simulate form submission
   await new Promise(resolve => setTimeout(resolve, 1500))
-  
+
   alert('Thank you for your message! We will get back to you soon.')
-  
+
   // Reset form
   form.firstName = ''
   form.lastName = ''
@@ -182,7 +182,7 @@ const submitForm = async () => {
   form.phone = ''
   form.service = ''
   form.message = ''
-  
+
   isSubmitting.value = false
 }
 </script>

@@ -19,7 +19,7 @@
               of Digital Innovation
             </h1>
             <p class="text-xl text-slate-300 mb-8 leading-relaxed">
-              We create cutting-edge web applications and SaaS solutions that transform businesses. 
+              We create cutting-edge web applications and SaaS solutions that transform businesses.
               Modern technology, exceptional design, outstanding results.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
@@ -38,7 +38,7 @@
               </NuxtLink>
             </div>
           </div>
-          
+
           <div class="hidden lg:block animate-slide-in-up">
             <div class="relative">
               <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-2xl blur-2xl"></div>

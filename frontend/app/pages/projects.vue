@@ -23,13 +23,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Filter Buttons -->
         <div class="flex flex-wrap justify-center gap-4 mb-12">
-          <button 
-            v-for="filter in filters" 
+          <button
+            v-for="filter in filters"
             :key="filter.value"
             @click="activeFilter = filter.value"
-            :class="['px-6 py-2 rounded-full font-medium transition-all duration-300', 
-                     activeFilter === filter.value 
-                       ? 'bg-cyan-500 text-white' 
+            :class="['px-6 py-2 rounded-full font-medium transition-all duration-300',
+                     activeFilter === filter.value
+                       ? 'bg-cyan-500 text-white'
                        : 'bg-slate-700 text-slate-300 hover:bg-slate-600']"
           >
             {{ filter.label }}
@@ -38,15 +38,16 @@
 
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div 
-            v-for="project in filteredProjects" 
-            :key="project.title" 
+          <div
+            v-for="project in filteredProjects"
+            :key="project.title"
             class="card overflow-hidden hover-lift group"
           >
             <div class="relative overflow-hidden">
-              <img 
-                :src="project.image" 
-                :alt="project.title" 
+              <img
+                :src="project.image"
+                :alt="project.title"
+                loading="lazy"
                 class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
               >
               <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
@@ -55,8 +56,8 @@
             </div>
             <div class="p-6">
               <div class="flex flex-wrap gap-2 mb-3">
-                <span 
-                  v-for="tag in project.tags" 
+                <span
+                  v-for="tag in project.tags"
                   :key="tag"
                   class="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded"
                 >

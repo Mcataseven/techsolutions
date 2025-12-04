@@ -12,11 +12,15 @@
 
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
-              <NuxtLink to="/" class="nav-link" :class="{ 'text-cyan-400': $route.path === '/' }">Home</NuxtLink>
-              <NuxtLink to="/about" class="nav-link" :class="{ 'text-cyan-400': $route.path === '/about' }">About</NuxtLink>
-              <NuxtLink to="/services" class="nav-link" :class="{ 'text-cyan-400': $route.path === '/services' }">Services</NuxtLink>
-              <NuxtLink to="/projects" class="nav-link" :class="{ 'text-cyan-400': $route.path === '/projects' }">Projects</NuxtLink>
-              <NuxtLink to="/contact" class="nav-link" :class="{ 'text-cyan-400': $route.path === '/contact' }">Contact</NuxtLink>
+              <NuxtLink
+                v-for="item in navigation"
+                :key="item.name"
+                :to="item.href"
+                class="nav-link"
+                :class="{ 'text-cyan-400': $route.path === item.href }"
+              >
+                {{ item.name }}
+              </NuxtLink>
             </div>
           </div>
 
@@ -42,12 +46,18 @@
         <!-- Mobile menu -->
         <div v-show="mobileMenuOpen" class="md:hidden pb-4">
           <div class="flex flex-col space-y-2">
-            <NuxtLink to="/" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-base font-medium">Home</NuxtLink>
-            <NuxtLink to="/about" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-base font-medium">About</NuxtLink>
-            <NuxtLink to="/services" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-base font-medium">Services</NuxtLink>
-            <NuxtLink to="/projects" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-base font-medium">Projects</NuxtLink>
-            <NuxtLink to="/contact" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-base font-medium">Contact</NuxtLink>
-            <NuxtLink to="/contact" class="bg-cyan-500 text-white px-4 py-2 rounded-lg font-medium text-center mt-2">Get Quote</NuxtLink>
+            <NuxtLink
+              v-for="item in navigation"
+              :key="item.name"
+              :to="item.href"
+              class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-base font-medium"
+              @click="mobileMenuOpen = false"
+            >
+              {{ item.name }}
+            </NuxtLink>
+            <NuxtLink to="/contact" class="bg-cyan-500 text-white px-4 py-2 rounded-lg font-medium text-center mt-2" @click="mobileMenuOpen = false">
+              Get Quote
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -85,11 +95,11 @@
           <div>
             <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
             <ul class="space-y-2">
-              <li><NuxtLink to="/" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Home</NuxtLink></li>
-              <li><NuxtLink to="/about" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">About</NuxtLink></li>
-              <li><NuxtLink to="/services" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Services</NuxtLink></li>
-              <li><NuxtLink to="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Projects</NuxtLink></li>
-              <li><NuxtLink to="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Contact</NuxtLink></li>
+              <li v-for="item in navigation" :key="item.name">
+                <NuxtLink :to="item.href" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
+                  {{ item.name }}
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
@@ -146,7 +156,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <button 
+    <button
       v-show="showBackToTop"
       @click="scrollToTop"
       class="fixed bottom-8 right-8 w-12 h-12 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg shadow-cyan-500/25 flex items-center justify-center transition-all duration-300 z-50"
@@ -161,6 +171,14 @@
 <script setup>
 const mobileMenuOpen = ref(false)
 const showBackToTop = ref(false)
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Contact', href: '/contact' }
+]
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })

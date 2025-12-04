@@ -28,13 +28,13 @@
             </div>
             <h2 class="text-3xl font-bold text-white mb-6">From Vision to Reality</h2>
             <p class="text-slate-300 mb-4 leading-relaxed">
-              Founded in 2018, TechSolutions started with a simple mission: to help businesses leverage technology 
-              for growth and success. What began as a small team of passionate developers has grown into a 
+              Founded in 2018, TechSolutions started with a simple mission: to help businesses leverage technology
+              for growth and success. What began as a small team of passionate developers has grown into a
               full-service digital agency.
             </p>
             <p class="text-slate-300 mb-6 leading-relaxed">
-              Today, we work with clients ranging from startups to enterprises, delivering custom solutions 
-              that drive real business results. Our commitment to quality, innovation, and client satisfaction 
+              Today, we work with clients ranging from startups to enterprises, delivering custom solutions
+              that drive real business results. Our commitment to quality, innovation, and client satisfaction
               remains at the core of everything we do.
             </p>
             <div class="flex gap-4">
@@ -60,7 +60,7 @@
           </div>
           <h2 class="text-3xl font-bold text-white mb-4">What Drives Us</h2>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div v-for="value in values" :key="value.title" class="card p-8 text-center hover-lift">
             <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -90,7 +90,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div v-for="member in team" :key="member.name" class="card p-6 text-center hover-lift">
-            <img :src="member.image" :alt="member.name" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <img :src="member.image" :alt="member.name" loading="lazy" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
             <h3 class="text-lg font-semibold text-white">{{ member.name }}</h3>
             <p class="text-cyan-400 text-sm mb-2">{{ member.role }}</p>
             <p class="text-slate-400 text-sm">{{ member.bio }}</p>
