@@ -7,5 +7,26 @@ export default defineNuxtConfig({
   ssr: true,
   nitro: {
     preset: 'static'
+  },
+
+  // Global CSS
+  css: ['~/assets/css/main.css'],
+
+  // Modules
+  modules: ['@nuxtjs/tailwindcss'],
+
+  // App configuration
+  app: {
+    head: {
+      title: 'TechSolutions',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Professional Web Development & SaaS Solutions' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
   }
 })

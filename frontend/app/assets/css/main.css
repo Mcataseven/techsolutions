@@ -1,0 +1,216 @@
+/* TechSolutions - Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #06b6d4;
+    --secondary: #14b8a6;
+    --dark: #0f172a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Gradients */
+.gradient-bg {
+    background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.1) 0%, transparent 40%);
+}
+
+.tech-gradient {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card */
+.card {
+    background-color: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3);
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #06b6d4;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.25);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0891b2;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    border-color: #06b6d4;
+    color: white;
+}
+
+/* Form Elements */
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    background-color: rgba(30, 41, 59, 0.5);
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    transition: all 0.3s;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #06b6d4;
+    box-shadow: 0 0 0 1px #06b6d4;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+/* Capsule */
+.capsule {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-in-up {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Utility Classes */
+.text-cyan-400 {
+    color: #22d3ee;
+}
+
+.text-cyan-500 {
+    color: #06b6d4;
+}
+
+.text-teal-400 {
+    color: #2dd4bf;
+}
+
+.text-slate-300 {
+    color: #cbd5e1;
+}
+
+.text-slate-400 {
+    color: #94a3b8;
+}
+
+.bg-slate-700 {
+    background-color: #334155;
+}
+
+.bg-slate-800 {
+    background-color: #1e293b;
+}
+
+.bg-slate-900 {
+    background-color: #0f172a;
+}
+
+.border-slate-700 {
+    border-color: #334155;
+}
+
+.border-slate-800 {
+    border-color: #1e293b;
+}
